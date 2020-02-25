@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW M5</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+</head>
+<body class="wrapper">
+    <header id="header" class="header wrapper__header">
+      <nav class="navigation header__navigation">
+        <section class="logo">
+            <img class="logo__image" src="images/logo.png" alt="logo">
+        </section>
+        <section class="navigation__icon">
+          <span class="topBar"></span>
+          <span class="middleBar"></span>
+          <span class="bottomBar"></span>
+        </section>
+        <ul class="navigation__ul">
+          <li><a href="#about">Об автомобиле</a></li>
+          <li><a href="#gallery">галерея</a></li>
+          <li><a href="#models">модельный ряд</a></li>
+          <li><a href="#contacts">контакты</a></li>
+          </ul>
+      </nav>
+        <p class="header__title">Разгоняет реальность</p>
+        <h1 class="header__title">BMW M5</h1>
+        <p class="header__model">Серийная модель: BMW M550i xDrive</p>
+    </header>
+    <main class="main wrapper__main">
+        <section id="about" class="about main__about">
+            <div class="about__left-block">
+                <p class="about__text">Под капотом BMW M550i xDrive скрывается фантастическая мощь: 8-цилиндровый бензиновый двигатель M Performance TwinPower Turbo оказывается лучшим во всех отношениях. И это прекрасно слышно благодаря мощному звуку спортивной выпускной системы.</p>
+                <p class="about__text">Благодаря интеллектуальной системе полного привода xDrive с подчеркнуто заднеприводной настройкой ему блестяще удается любой старт.</p>
+                <p class="about__text">Адаптивная подвеска M занижена на 10 миллиметров и специально адаптирована к BMW M550i xDrive.<br>Оптимизировано рулевое управление, а спортивные тормоза M ориентированы<br>на максимальное замедление.</p>
+                <p class="about__text">Полноцветный проекционный дисплей отображает важную информацию непосредственно в поле зрения водителя.</p>
+                <p class="about__text">Особое внимание привлекает к себе не только аэродинамический пакет M, но и<br>увеличенные воздухозаборники.</p>
+            </div>
+            <div class="about__right-block">
+                <p class="about__text-right">Максимальная скорость - 250 км/ч</p>
+                <p class="about__text-right">Расход топлива<br>Городской цикл - 13,9-13,5 л/100 км<br>Загородный цикл - 7,8-7,6 л/100 км</p>
+                <p class="about__text-right">Выброс CO₂ - 227-225г/км<br>Объем топливного бака (прибл.) - 68 л</p>
+                <p class="about__text-right">Разгон с места до 100 км/ч<br>за 4,0 секунды при мощности 530 л.с</p>
+            </div>
+            <h2 class="title about__title">Об автомобиле</h2>
+        </section>
+        <section id="gallery" class="gallery main__gallery">
+            <div class="item" onclick="show(this)">
+<!--                <iframe class="gallery__video" src="https://www.youtube.com/embed/xvvnuaWDYzg"></iframe>-->
+                <video class="gallery__video" src="https://www.youtube.com/embed/xvvnuaWDYzg"></video>
+                <img class="gallery__img" src="images/video.jpg" alt="">
+            </div>
+            <div class="item" onclick="show(this)">
+                <img class="gallery__img" src="images/img1.jpg" alt="">
+            </div>
+            <div class="item" onclick="show(this)">
+                <img class="gallery__img" src="images/img2.jpg" alt="">
+            </div>
+            <div class="item" onclick="show(this)">
+                <img class="gallery__img" src="images/img3.jpg" alt="">
+            </div>
+            <div class="item" onclick="show(this)">
+                <img class="gallery__img" src="images/img4.jpg" alt="">
+            </div>
+            <div id="overlayer" class="overlayer gallery__overlayer" onclick="hide(this)">
+
+            </div>
+<!--            <div id="modal" class="modal gallery__modal">-->
+<!--                <iframe id="video" width="100%" height="100%"></iframe>-->
+<!--                <img id="image" width="100%" height="100%" alt="">-->
+<!--            </div>-->
+            <object id="modal" class="modal gallery__modal" width="100%" height="100%"></object>
+
+        </section>
+        <section id="models" class="models main__models">
+            <div class="models__model models__model--4">
+                <h3 class="models__car">BMW 4</h3>
+            </div>
+            <div class="models__model models__model--m6">
+                <h3 class="models__car">BMW M6</h3>
+            </div>
+            <div class="models__model models__model--m2">
+                <h3 class="models__car">BMW M2</h3>
+            </div>
+            <h2 class="title models__title">Модельный ряд</h2>
+            <svg id="back" onclick="back(-1)" class="arrow-left models__arrow-left" viewBox="0 0 30 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.343412 38.5162L14.171 72.1646C14.3907 72.6996 14.6888 73 14.9996 73H28.8271C29.8674 73 30.3935 69.9273 29.6558 68.132L16.6568 36.5L29.6558 4.86804C30.3918 3.07684 29.8696 0 28.8271 0H14.9996C14.6888 0 14.3907 0.300415 14.171 0.835083L0.343412 34.4834C-0.113913 35.5962 -0.114264 37.4028 0.343412 38.5162ZM15.4849 5.70312H25.9981L14.171 34.4835C13.7137 35.5963 13.7133 37.4028 14.171 38.5162L25.9981 67.2969H15.485L2.82919 36.5L15.4849 5.70312Z" fill="#999B9A"/>
+            </svg>
+            <svg id="forward" onclick="next(1)" class="arrow-right models__arrow-right" viewBox="0 0 30 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.6566 34.4838L15.8291 0.835365C15.6094 0.300412 15.3113 0 15.0005 0H1.17294C0.132663 0 -0.393392 3.0727 0.344303 4.86805L13.3433 36.5L0.344303 68.132C-0.391693 69.9232 0.130436 73 1.17294 73H15.0005C15.3113 73 15.6093 72.6996 15.8291 72.1649L29.6566 38.5166C30.114 37.4038 30.1143 35.5972 29.6566 34.4838ZM14.5151 67.2969H4.00196L15.8291 38.5165C16.2864 37.4037 16.2868 35.5972 15.8291 34.4838L4.00196 5.70312H14.5151L27.1709 36.5L14.5151 67.2969Z" fill="#999B9A"/>
+            </svg>
+        </section>
+    </main>
+    <footer id="contacts" class="contacts wrapper__contacts">
+        <h2 class="title contacts__title">Контакты</h2>
+        <iframe class="map contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50097.48084949593!2d27.53626513722424!3d53.97084482512263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc601aec7a0c7%3A0xb7f5be59ac1e42ba!2sAvtoideya!5e0!3m2!1ssr!2srs!4v1582615517743!5m2!1ssr!2srs"
+                frameborder="0" style="border:0;" allowfullscreen="">
+        </iframe>
+
+    </footer>
+    <a href="#header"><svg class="top wrapper__top" viewBox="0 0 73 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M73 33.5458L42.6626 0.214355V20.1005H36.2126C16.2127 20.1005 0 36.3449 0 56.384V66.9225L2.86493 63.7769C12.6054 53.0838 26.3875 46.9911 40.8369 46.9911H42.6626V66.8773L73 33.5458Z" fill="#999999"/>
+    </svg></a>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/models.js"></script>
+</body>
+</html>
