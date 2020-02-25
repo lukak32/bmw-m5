@@ -1,12 +1,8 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function back(n) {
+function change(n) {
     showSlides(slideIndex += n);
-}
-
-function next(n) {
-    showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
